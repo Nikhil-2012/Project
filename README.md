@@ -9,38 +9,31 @@
 Prerequisites:
 
 Before you begin, ensure you have met the following requirements:
-
 ->Python 3.7+
 ->Pip (Python package installer)
 ->Git (optional, if you want to clone the repository)
 Installation
 
 Clone the repository:
-
 git clone https://github.com/yourusername/your_project.git
 
 Or download the ZIP file from GitHub and extract it.
 
 Navigate into the project directory:
-
 cd your_project
 
 Create a virtual environment (optional but recommended):
-
 python -m venv venv
 
 Activate the virtual environment:
-
 On Windows:
 
-venv\Scripts\activate
+=> venv\Scripts\activate
 
 Install dependencies:
-
 pip install -r requirements.txt
 
-Running the Application
-
+Running the Application:
 To run the FastAPI application, follow these steps:
 
 1. Ensure you are in the project directory where main.py is located.
