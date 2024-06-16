@@ -1,11 +1,12 @@
 <<<<<<< HEAD Table of Contents
 
-Prerequisites
-Installation
-Running the Application
-API Documentation
-Endpoints
-Prerequisites
+1. Prerequisites
+2. Installation
+3. Running the Application
+4. API Documentation
+5. Endpoints
+   
+Prerequisites:
 
 Before you begin, ensure you have met the following requirements:
 
@@ -60,17 +61,21 @@ ReDoc: http://127.0.0.1:8000/redoc
 Endpoints
 
 Authentication:
-
 Register: POST /auth/register
 Login: POST /auth/login
-User Management:
 
+
+User Management:
 Get current user: GET /users/me/
 Update current user: PUT /users/me/
 Delete current user: DELETE /users/me/
-Account Management:
 
-Add money to account: POST /account/add Remove money from account: POST /account/remove Get account balance: GET /account/balance Get transaction history: GET /account/history
+
+Account Management:
+Add money to account: POST /account/add 
+Remove money from account: POST /account/remove 
+Get account balance: GET /account/balance
+Get transaction history: GET /account/history
 
 =======
 
