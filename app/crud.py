@@ -23,11 +23,11 @@ def get_user_by_username(db: Session, username: str) -> models.User:
     return db.query(models.User).filter(models.User.username == username).first()
 
 def create_transaction(db: Session, user_id: int, amount: float, description: Optional[str] = None) -> models.Account:
-    transaction = models.Account(user_id=user_id, amount=amount, description=description)
-    db.add(transaction)
+    account = models.Account(user_id=user_id, amount=amount, description=description)
+    db.add(account)
     db.commit()
-    db.refresh(transaction)
-    return transaction
+    db.refresh(account)
+    return account
 
 def update_user_balance(db: Session, user: models.User, amount: float) -> models.User:
     user.balance += amount

@@ -1,7 +1,7 @@
 from sqlalchemy import Column, Integer, String, Float, DateTime, ForeignKey
 from sqlalchemy.orm import relationship
 from datetime import datetime
-from .database import Base
+from app.database import Base
 
 class User(Base):
     __tablename__ = "users"
@@ -11,7 +11,7 @@ class User(Base):
     hashed_password = Column(String)
     balance = Column(Float, default=0.0)
 
-    transactions = relationship("Transaction", back_populates="user")
+    accounts = relationship("Account", back_populates="user")
 
 class Account(Base):
     __tablename__ = "accounts"
@@ -21,5 +21,5 @@ class Account(Base):
     timestamp = Column(DateTime, default=datetime.utcnow)
     description = Column(String)
 
-    user = relationship("User", back_populates="transactions")
+    user = relationship("User", back_populates="accounts")
 

@@ -8,7 +8,7 @@ router = APIRouter(
     tags=["users"],
 )
 
-@router.get("/me/", response_model=schemas.UserResponse)
+@router.get("/me", response_model=schemas.UserResponse)
 def read_users_me(current_user: User = Depends(security.get_current_user)):
     return current_user
 
